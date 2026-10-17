@@ -49,7 +49,7 @@ final class SettingsTest extends TestCase {
 			array( 'post' )
 		);
 		$this->assertSame( array( 'post' ), $out['post_types'] );
-		$this->assertSame( '#c9334f', $out['accent'] );
+		$this->assertSame( '#e0556f', $out['accent'] );
 		$this->assertSame( 'allow', $out['policy'] );
 		$this->assertFalse( $out['xr_enabled'] );
 		$this->assertSame( '', $out['base_url'] );

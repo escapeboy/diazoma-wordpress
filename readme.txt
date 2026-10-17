@@ -1,7 +1,7 @@
 === Diazoma Wall ===
 Requires at least: 6.0
 Requires PHP: 8.1
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,10 @@ A post whose first block is a Video block becomes a video card: the video file o
 A post whose first block is an Embed block with a YouTube or Vimeo link becomes an embed card: `media_type` is `video` and `unplayable` carries the provider and the canonical embed URL (YouTube through youtube-nocookie.com). A YouTube post without a featured image gets YouTube's thumbnail. The host of a link is matched exactly, so a lookalike such as youtube.com.evil.example is ignored.
 
 == Changelog ==
+
+= 0.2.1 =
+* With no script base URL, the /xr page uses the hosted wall files at https://diazoma.app/wall/0.1.0/.
+* Default accent #e0556f: it reaches 4.5:1 on the wall background, so the settings page no longer warns about its own default.
 
 = 0.2.0 =
 * Video blocks and YouTube/Vimeo embeds in the feed: `video`, `video_type`, `media_type`, `duration`, `unplayable`.

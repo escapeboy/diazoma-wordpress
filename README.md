@@ -11,11 +11,11 @@ Requires PHP 8.1+ and WordPress 6.0+.
 
 ## Install
 
-1. Download https://diazoma.app/downloads/diazoma-wall-0.2.0.zip and upload it in Plugins -> Add New -> Upload Plugin,
+1. Download https://diazoma.app/downloads/diazoma-wall-0.2.1.zip and upload it in Plugins -> Add New -> Upload Plugin,
    or copy this directory to `wp-content/plugins/diazoma-wall`.
 2. If you cloned the repository, run `composer install --no-dev` inside it (without `vendor/` the plugin falls back to a built-in loader and still works).
 3. Activate the plugin. Activation flushes rewrite rules.
-4. Open Settings -> Diazoma Wall: pick post types, accent colour (a warning shows when contrast is below 4.5:1), policy, the `/xr` page and, optionally, the script base URL (empty uses the hosted files at `https://diazoma.app/wall/0.1.0`; otherwise the directory holding `diazoma-embed.js`, `wall.iife.js` and `loader.js`, plus `wall-hls.js` and `wall-dash.js` for HLS/DASH video; without those two, such videos offer "watch in the browser" and mp4 still plays).
+4. Open Settings -> Diazoma Wall: pick post types, accent colour (a warning shows when its contrast against the wall background is below 4.5:1), policy, the `/xr` page and, optionally, the script base URL (empty uses the hosted files at `https://diazoma.app/wall/0.1.0`; otherwise the directory holding `diazoma-embed.js`, `wall.iife.js` and `loader.js`, plus `wall-hls.js` and `wall-dash.js` for HLS/DASH video; without those two, such videos offer "watch in the browser" and mp4 still plays).
 
 Only public post types can be requested. Requesting a non-public type returns 403, an unknown one 400.
 
@@ -27,7 +27,7 @@ The manifest passes through the `diazoma_wall_manifest` filter just before it is
 add_filter( 'diazoma_wall_manifest', function ( array $manifest, array $settings ): array {
 	$manifest['view'] = array(
 		'wall'  => array( 'rows' => 4 ),
-		'theme' => array( 'colors' => array( 'accent' => '#c9334f' ) ),
+		'theme' => array( 'colors' => array( 'accent' => '#e0556f' ) ),
 	);
 	return $manifest;
 }, 10, 2 );

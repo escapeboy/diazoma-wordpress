@@ -27,7 +27,7 @@ final class Settings {
 	public static function defaults(): array {
 		return array(
 			'post_types' => array( 'post' ),
-			'accent'     => '#c9334f',
+			'accent'     => '#e0556f',
 			'policy'     => 'allow',
 			'xr_enabled' => false,
 			'base_url' => '',

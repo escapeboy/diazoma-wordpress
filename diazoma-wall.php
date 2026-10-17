@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Diazoma Wall
  * Description:       Publishes a Diazoma wall feed, a .well-known/wall.json manifest and an optional /xr embed page.
- * Version:           0.2.0
+ * Version:           0.2.1
  * Requires at least: 6.0
  * Requires PHP:      8.1
  * Author:            Diazoma
@@ -17,14 +17,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DIAZOMA_WALL_VERSION', '0.2.0' );
+define( 'DIAZOMA_WALL_VERSION', '0.2.1' );
 define( 'DIAZOMA_WALL_FILE', __FILE__ );
 
 $diazoma_wall_autoload = __DIR__ . '/vendor/autoload.php';
 if ( is_readable( $diazoma_wall_autoload ) ) {
 	require_once $diazoma_wall_autoload;
 } else {
-	// Release zips ship without vendor/: plain PSR-4 loader for Diazoma\Wall\.
+	// Without vendor/ (a plain copy of the source): plain PSR-4 loader for Diazoma\Wall\.
 	spl_autoload_register(
 		static function ( string $class_name ): void {
 			$prefix = 'Diazoma\\Wall\\';
